@@ -45,6 +45,7 @@ func main() {
 	pflag.Lookup("debug").Hidden = true
 	pflag.BoolVarP(&options.Strict, "strict", "s", false, "fail on any warning")
 	pflag.BoolVarP(&options.Pretty, "pretty", "p", false, "output formatted json")
+	pflag.BoolVarP(&options.Raw, "raw", "r", false, "output only Ignition config, without any wrapper")
 	pflag.StringVar(&input, "input", "", "read from input file instead of stdin")
 	pflag.Lookup("input").Deprecated = "specify filename directly on command line"
 	pflag.Lookup("input").Hidden = true
